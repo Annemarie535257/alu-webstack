@@ -44,7 +44,7 @@ frontend http
 frontend https
 	mode http
 	timeout client 10s
-	bind *:443 ssl crt /etc/letsencrypt/live/www.sjamillah.tech/combined.pem
+	bind *:443 ssl crt  /etc/letsencrypt/live/www.annemarie535257.tech/fullchain.pem
 	default_backend allServers
 
 
@@ -53,5 +53,5 @@ backend allServers
 	timeout server  10s
 	balance roundrobin
 	mode http
-	server 5821-web-01 18.232.176.85:80 check
-	server 5821-web-02 18.234.51.9:80 check
+	server 6047-web-01 100.26.54.116:80 check
+	server 6047-web-02 18.212.79.227:80 check
